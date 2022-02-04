@@ -1,10 +1,10 @@
-M = int(input())
 N = int(input())
+M = int(input())
 
 array = []
 
 # Create table using nested lists
-for colum in range(N):
+for column in range(N):
     num_row = []
     for row in range(M):
         num_row.append(0)
@@ -25,8 +25,8 @@ for order in range(K):
                 change = 1
             else:
                 change = 0
-            array[column_row - 1].insert(i,change)
-            array[column_row - 1].pop(i+1)
+
+            array[column_row - 1][i] = change
             i += 1
     else:
         i = 0
@@ -35,10 +35,9 @@ for order in range(K):
                 change = 1
             else:
                 change = 0
-            array[i].insert(column_row - 1,change)
-            array[i].pop(column_row)
+            array[i][column_row - 1] = change
             i += 1
-
+    
 gold = 0
 j = 0    
 while j < len(array):
