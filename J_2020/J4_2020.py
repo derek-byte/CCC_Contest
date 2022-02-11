@@ -8,7 +8,7 @@ def answer():
 
         j = len(text) 
         k = 0
-        while j < len(cyclic_shift):
+        while j <= len(cyclic_shift):
             if cyclic_shift[k:j] == text:
                 return "yes"
             j += 1 
