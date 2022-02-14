@@ -41,11 +41,12 @@ for order in range(K):
 gold = 0
 j = 0    
 while j < len(array):
-    h = 0
-    while h < len(array[j]):
-        if array[j][h] == 1:
-            gold += 1
-        h += 1 
+    gold += sum(array[j]) 
+    # h = 0
+    # while h < len(array[j]):
+    #     if array[j][h] == 1:
+    #         gold += 1
+    #     h += 1 
     j += 1
 
 print(gold)
