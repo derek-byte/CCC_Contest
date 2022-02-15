@@ -5,10 +5,10 @@ y_arr = []
 
 for num in range(N):
     inp = input()
-    coord = inp.split(",")
+    cord = inp.split(",")
 
-    x = coord[0]
-    y = coord[1]
+    x = cord[0]
+    y = cord[1]
 
     x_arr.append(int(x))
     y_arr.append(int(y))
