@@ -21,11 +21,13 @@ for key, value in dict.items():
         low_key, high_key = high_key, low_key
         low_value, high_value = high_value, low_value
 
-    if value >= low_value and low_key > key:
-        low_key = key
-        low_value = value
-    elif value >= high_value and high_key < key:
-        high_key = key
-        high_value = value
+    if value >= low_value:
+        if low_key > key:
+            low_key = key
+            low_value = value
+    if value >= high_value:
+        if high_key < key and key != low_key:
+            high_key = key
+            high_value = value
 
 print(abs(high_key-low_key))
