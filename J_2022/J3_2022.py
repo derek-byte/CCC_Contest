@@ -1,8 +1,5 @@
 instruc = input()
 
-# if len(instruc) > 11:
-#     print("AFB tig")
-
 sep = ""
 num = ""
 i = 0
@@ -18,12 +15,10 @@ while i < len(instruc):
         try:
             i += 1
             while int(instruc[i]) == int(instruc[i]):
-                # num += instruc[i]
                 i += 1
         except:
             pass
 
-        # sep += instruc[i+1]
         i += 1
         print(sep, order, instruc[j:i-1])
 
